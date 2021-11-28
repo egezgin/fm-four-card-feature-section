@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Four card feature article</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+		:root {
+			--very-light-gray: hsl(0, 0%, 98%);
+			--very-dark-blue: hsl(234, 12%, 34%);
+			--grayish-blue: hsl(229, 6%, 66%);
+			--white: hsl(0, 0%, 100%);
+			--red: hsl(0, 78%, 62%);
+			--cyan: hsl(180, 62%, 55%);
+			--orange: hsl(34, 97%, 64%);
+			--blue: hsl(212, 86%, 64%);
+
+			font-size: 10px;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: var(--very-light-gray);
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-self: center;
+			font-family: 'Poppins', sans-serif;
+			max-width: 144rem;
+			padding: 8rem 3.2rem;
+		}
+
+		main {
+			display: grid;
+			gap: 2.5rem;
+			margin-top: 7.4rem;
+			grid-template-areas:
+				"supervisor"
+				"team-builder"
+				"karma"
+				"calculator";
+		}
+
+		section {
+			background-color: var(--white);
+			box-shadow: 0 1.6rem 1.6rem 0 hsla(212, 86%, 64%, .2);
+			border-radius: 0.8rem;
+			overflow: hidden;
+		}
+
+		.flex-end {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		article>footer {
+			margin-top: 3.2rem;
+		}
+
+		h1 {
+			font-weight: 200;
+			font-size: 2.4rem;
+			color: var(--very-dark-blue);
+		}
+
+		h2 {
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: var(--very-dark-blue);
+		}
+
+		h4 {
+			font-size: 1.5rem;
+			font-weight: 400;
+			color: var(--grayish-blue);
+			opacity: 0.75;
+		}
+
+		h3 {
+			font-size: 2rem;
+			color: var(--very-dark-blue);
+		}
+
+		p {
+			font-weight: 400;
+			color: var(--grayish-blue);
+			opacity: 0.75;
+			font-size: 1.3rem;
+			margin-top: 0.6rem;
+			line-height: 2.1rem;
+		}
+
+		.img-size {
+			width: 57px;
+			aspect-ratio: 1;
+		}
+
+		.attribution {
+			margin-top: 3rem;
+			font-size: 1.1rem;
+			text-align: center;
+		}
+
+		.attribution a {
+			color: hsl(228, 45%, 44%);
+			text-decoration: none;
+		}
+
+		article {
+			padding: 2.2rem 2.8rem 2.8rem 2.9rem;
+		}
+
+		div {
+			width: 100%;
+			height: 4px;
+		}
+
+		.bg-cyan {
+			background-color: var(--cyan);
+		}
+
+		.grid-area-supervisor {
+			grid-area: supervisor;
+		}
+
+		.grid-area-calculator {
+			grid-area: calculator;
+		}
+
+		.grid-area-karma {
+			grid-area: karma;
+		}
+
+		.grid-area-team-builder {
+			grid-area: team-builder;
+		}
+
+		.bg-red {
+			background-color: var(--red);
+		}
+
+		.bg-orange {
+			background-color: var(--orange);
+		}
+
+		.bg-blue {
+			background-color: var(--blue);
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.fs-1-5 {
+			font-size: 1.5rem;
+		}
+
+		header>p {
+			margin-top: 1.6rem;
+			line-height: 2.5rem;
+		}
+
+		@media screen and (min-width: 600px) {
+
+			h1,
+			h2 {
+				font-size: 3.17rem;
+			}
+
+			body {
+				padding: 6.7rem 14.2rem;
+			}
+
+			main {
+				grid-template-areas:
+					". team-builder ."
+					"supervisor team-builder calculator"
+					"supervisor karma calculator"
+					". karma .";
+				margin-top: 5rem;
+			}
+
+			header {
+				width: 45rem;
+				line-height: 4.5rem;
+			}
+
+			.fs-400 {
+				font-size: 1.3rem;
+			}
+
+			header>p {
+				margin-top: 1.4rem;
+				line-height: 2.3rem;
+			}
+
+			article {
+				padding: 1.5rem 2.8rem 2.8rem 2.8rem;
+			}
+
+			h3 {
+				font-size: 1.7rem;
+			}
+
+			p {
+				margin-top: -.3rem;
+				font-size: 1.14rem;
+				line-height: 2rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="text-center">
+		<h1>Reliable, efficient delivery</h1>
+		<h2>Powered by Technology</h2>
+		<p class="fs-1-5">Our Artificial Intelligence powered tools use millions of project data points to ensure that
+			your project is
+			successful</p>
+	</header>
+	<main>
+		<section class="grid-area-supervisor">
+			<div class="bg-cyan">
+			</div>
+			<article>
+				<header>
+					<h3>
+						Supervisor
+					</h3>
+				</header>
+				<p>Monitors activity to identify project roadblocks</p>
+				<footer class="flex-end">
+					<img class="img-size" src="./images/icon-supervisor.svg">
+				</footer>
+			</article>
+		</section>
+		<section class="grid-area-team-builder">
+			<div class="bg-red">
+			</div>
+			<article>
+				<header>
+					<h3>
+						Team Builder
+					</h3>
+				</header>
+				<p>Scans our talent network to create the optimal team for your project</p>
+				<footer class="flex-end">
+					<img class="img-size" src="./images/icon-team-builder.svg">
+				</footer>
+			</article>
+		</section>
+		<section class="grid-area-karma">
+			<div class="bg-orange">
+			</div>
+
+			<article>
+				<header>
+					<h3>
+						Karma
+					</h3>
+				</header>
+				<p>Regularly evaluates our talent to ensure quality</p>
+				<footer class="flex-end">
+					<img class="img-size" src="./images/icon-karma.svg">
+				</footer>
+			</article>
+		</section>
+		<section class="grid-area-calculator">
+			<div class="bg-blue">
+			</div>
+
+			<article>
+				<header>
+					<h3>
+						Calculator
+					</h3>
+				</header>
+				<p>Uses data from past projects to provide better delivery estimates</p>
+				<footer class="flex-end">
+					<img class="img-size" src="./images/icon-calculator.svg">
+				</footer>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a href="#">Emrah Gezgin</a>.
+		</p>
+	</footer>
+</body>
+
+</html>
